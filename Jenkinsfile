@@ -13,7 +13,6 @@ pipeline {
        stage('Send_To_Mail'){
          steps{ 
            script{
-                 // Send an email with the README content from the environment variable
                     emailext(
                         subject: 'New commit',
                         body: env.CONTENT,
